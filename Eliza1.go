@@ -6,11 +6,24 @@ import (
     "fmt"
     "math/rand"
     //"bufio"
-    "time"
+    //"time"
     "regexp"
+    "net/http"
 )
 
 
+    func routeHandler(w http.ResponseWriter, r *http.Request) {
+	//serve the homepage.html file
+	http.ServeFile(w, r, "Eliza1.html")
+}
+
+func chatHandler(w http.ResponseWriter, r *http.Request) {
+
+    
+}
+
+    
+    
     //function taking in a single string as an input
     func ElizaResponse() string {
 
@@ -26,7 +39,6 @@ import (
 
         }
 
-//
         re := regexp.MustCompile("I am ([^.!?]*)[.!?]?")
         if re.MatchString(userInput){
         return re.ReplaceAllLiteralString(userInput, "How do you know you are $1")
@@ -44,6 +56,14 @@ import (
 
 
 func main() {
-rand.Seed(time.Now().UTC().UnixNano())//random number
-ElizaResponse()
+//rand.Seed(time.Now().UTC().UnixNano())//random number
+//ElizaResponse()
+
+	http.HandleFunc("/", routeHandler)
+	//handle request to /chat
+	//http.HandleFunc("/chat", chatHandler)
+
+	http.ListenAndServe(":8080", nil)
+
+
 }
