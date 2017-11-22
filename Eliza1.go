@@ -11,7 +11,6 @@ import (
     func routeHandler(w http.ResponseWriter, r *http.Request) {
 	//serve the homepage.html file
 	http.ServeFile(w, r, "Eliza.html")
-
     w.Header().Set("Content-Type", "text/html")
 
 }

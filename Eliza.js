@@ -7,6 +7,14 @@ const listItem = $("#list-group");
 
     const input = form.val();
 
+    form.keypress(function(event){
+    if(event.keyCode != 13){ // ENTER
+        return;
+    }
+
+    event.preventDefault();//Stops the window refreshing
+
+
     form.val(" ");
     console.log("before")
     console.log(input)
@@ -28,4 +36,3 @@ console.log("after")
                 listItem.append(nextListItem);
             });
 
-}
