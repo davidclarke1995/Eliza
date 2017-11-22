@@ -6,24 +6,23 @@ import (
     //"html/template"
     "fmt"
     "net/http"
+	"./regexp"
 )
 
-    func routeHandler(w http.ResponseWriter, r *http.Request) {
-	//serve the homepage.html file
-	http.ServeFile(w, r, "Eliza.html")
-    w.Header().Set("Content-Type", "text/html")
-
-}
-
 func chatHandler(w http.ResponseWriter, r *http.Request) {
-	output:= "Hello"
+	input := r.URL.Query().Get("inputUser")
+	output := hello.ElizaOutput(input)
+	//output:= "Hello"
 	fmt.Fprintf(w, output)
+	//fmt.Println(output)
 }
 
 func main() {
 
+	dir := http.Dir("./static")
+	Server := http.FileServer(dir)
 
-	http.HandleFunc("/", routeHandler)
+	http.Handle("/", Server)
 	//handle request to /chat
 	http.HandleFunc("/chat", chatHandler)
 
