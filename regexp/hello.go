@@ -37,13 +37,5 @@ func ElizaOutput(inputStr string) string{
 			output = "Input: " + input + " \nOutput :" + answers[rand.Intn(len(answers))]
 		}
 
-
-
-
-
-
-
-
-
 		return answers[rand.Intn(len(answers))]
 }

@@ -5,7 +5,7 @@ const list = $("#conversation_list");
 
 
 form.keypress(function(event){
-    if(event.keyCode != 13){ // ENTER
+    if(event.keyCode != 13){ //Enter
         return;
     }
 

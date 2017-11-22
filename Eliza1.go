@@ -20,9 +20,9 @@ func chatHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	dir := http.Dir("./static")
-	Server := http.FileServer(dir)
+	fileServer := http.FileServer(dir)
 
-	http.Handle("/", Server)
+	http.Handle("/", fileServer)
 	//handle request to /chat
 	http.HandleFunc("/chat", chatHandler)
 
