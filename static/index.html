@@ -1,51 +1,57 @@
-<!doctype html>
+<!--David Clarke G00335563 -->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Eliza Chatbot</title>
+
+<head>
+    <title>Hello, world!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Sourcing jquery and ajax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="script.js"></script>
+    <!--external script.js file-->
+    <script type = "text/JavaScript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-  <style>
-	body { 
-    padding-top: 65px; 
-	padding-bottom: 100px; 
-}
-  </style>
-  
-  </head>
-  <body>
-    <nav class="navbar fixed-top navbar-muted bg-muted">
-  <a class="navbar-brand" href="#">Eliza Chat</a>
-</nav>
-	<div class="container-fluid">
-		<ul class="list-group">
-			<li class="list-group-item list-group-item-primary text-right text-black">     
-<li class="list-group-item">  
-		</ul>
-	</div>
+    <style>
+        body {
+            padding-top: 65px;
+            padding-bottom: 100px;
+        }
+    </style>
 
-<div class="fixed-bottom bg-warning p-2">
-	<div class="container">
-		<form>
-			<div class="form-group">
-        <!--User Input-->
-				<input type="text" class="form-control" id="userInput" placeholder="Talk to me...">
-			</div>
-		</form>
-	</div>
-</div>
+</head>
 
-    <!-- jQuery first, Popper.js, Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<body>
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Eliza chat</a>
+    </nav>
+    <div class="container-fluid">
+      <ul >
+        <ul id="list-group"></ul>
+
+          <div class="fixed-bottom bg-primary  p-2">
+              <div class="container">
+                <div>    
+                </div>
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="userInput" placeholder="Talk to Eliza...">
+                      <button type="button" onclick="scriptFunction()">Chat!</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+        </ul>  </div><!-- conversation list -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </body>
+
+    
+</body>
+
 </html>

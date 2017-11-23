@@ -1,41 +1,40 @@
+//David Clarke G00335563
 package hello
-
+//imports
 import (
     //"fmt"
     "math/rand"
     //"bufio"
-    "time"
+    //"time"
     "regexp"
 	//"os"
-	//"strings"	
+	"strings"	
 )
 
 func ElizaOutput(inputStr string) string{
 
-
+	//converting input to string
 	input := inputStr
-	//pattern := `.*father.*`
-	pattern := `(?!).*\bfather\b.*`
-	//pattern2 := []string{`.*i am(.*)`, `.*I AM(.*)`, `.*I'm(.*)`, `.*i'm(.*)`, `.*im(.*)`, `.*I am(.*)`}
-	output := "Why dont you tell me more about your father?"
-	//response := ""
-	rand.Seed(time.Now().UTC().UnixNano())
 
+	//Regular Expressions
+	if matched,_ := regexp.MatchString(`(?i). *\bkevin\b.*`,input); matched {
+		return "That guy is stupid..."
+	}
 
+	if strings.Contains(strings.ToLower(input), "hello"){
+		return "Hi!! How are you??"
+	}
 
-		answers := []string{//responses
-        	"I’m not sure what you’re trying to say. Could you explain it to me?",
-        	"How does that make you feel?",
-        	"Why do you say that?",
-        }
+	//array of random answers
+	answers := []string{
+		"Alright. Interesting....",
+		"How does that make you feel?",
+		"Why do you say that?",
+		"Huh??",
+		"I'm not even going to pretend that I know what you're trying to say...",
+		 
 
-        if matched, _ := regexp.MatchString(pattern, input); matched {
-        //returning the string below
-        	output = "Input: " + input + "\nOutput :" + output
-
-		} else {
-			output = "Input: " + input + " \nOutput :" + answers[rand.Intn(len(answers))]
-		}
-
+	}
+		//return answer if input does not match expressions
 		return answers[rand.Intn(len(answers))]
 }
