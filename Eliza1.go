@@ -7,13 +7,14 @@ import (
     "fmt"
     "net/http"
 	"./regexp"
-	
+
 )
 
 func chatHandler(w http.ResponseWriter, r *http.Request) {
 	input := r.URL.Query().Get("inputUser")
 	output := hello.ElizaOutput(input)
 	//output:= "Hello"
+	print("i ammmmm in chat handler"+ input)
 	fmt.Fprintf(w, output)
 	//fmt.Println(output)
 }

@@ -5,27 +5,45 @@ import (
     //"fmt"
     "math/rand"
     //"bufio"
-    //"time"
+    "time"
     "regexp"
 	//"os"
 	"strings"	
 )
 
+
+
+
 func ElizaOutput(inputStr string) string{
+
+
+	matchers := [] string{
+		"(.*)tom(.*)",
+		"(.*)hello(.*)",
+		"(.*)bye(.*)",
+	}
+
+	solutions := [] string{
+		"Hello Tom, how are you?=guman tommmage",
+		"Hi, how are things!?",
+		"Goodbye my friend!!",
+	}
 
 	//converting input to string
 	input := inputStr
 
+
 	//Regular Expressions
-	if strings.Contains(strings.ToLower(input), "hello"){
-		return "Hi!! How are you??"
-	}
+	for counter,_ :=range matchers {
+		patternToMatch := regexp.MustCompile(matchers[counter])
+	if patternToMatch.MatchString(input) {
+		newSolutions:= strings.Split(solutions[counter], "=")
 
-	if matched,_ := regexp.MatchString(`(?i). *\bkevin\b.*`,input); matched {
-		return "That guy is stupid..."
-	}
+		print("iinnn maaaaaaaaaaaaaaaaaaaaaaaaaatccccch")
+		return newSolutions[rand.Intn(len(newSolutions))]
+		}
 
-
+	}//for loop
 
 	//array of random answers
 	answers := []string{
@@ -37,6 +55,10 @@ func ElizaOutput(inputStr string) string{
 		 
 
 	}
+			print("b44444444 rand return")
+
+
+		rand.Seed(time.Now().UTC().UnixNano())//Sets the time
 		//return answer if input does not match expressions
 		return answers[rand.Intn(len(answers))]
 }
