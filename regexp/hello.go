@@ -17,13 +17,15 @@ func ElizaOutput(inputStr string) string{
 	input := inputStr
 
 	//Regular Expressions
+	if strings.Contains(strings.ToLower(input), "hello"){
+		return "Hi!! How are you??"
+	}
+
 	if matched,_ := regexp.MatchString(`(?i). *\bkevin\b.*`,input); matched {
 		return "That guy is stupid..."
 	}
 
-	if strings.Contains(strings.ToLower(input), "hello"){
-		return "Hi!! How are you??"
-	}
+
 
 	//array of random answers
 	answers := []string{
