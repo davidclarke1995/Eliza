@@ -15,18 +15,18 @@ import (
 
 
 func ElizaOutput(inputStr string) string{
-
+rand.Seed(time.Now().UTC().UnixNano())//Sets the seeds randomly
 
 	matchers := [] string{
-		"(.*)tom(.*)",
 		"(.*)hello(.*)",
 		"(.*)bye(.*)",
+		"(.*)yes(.*)",
 	}
 
 	solutions := [] string{
-		"Hello Tom, how are you?=guman tommmage",
-		"Hi, how are things!?",
-		"Goodbye my friend!!",
+		"Hi, how are things!?=Well, how are you my friend?",
+		"Goodbye my friend!!=Goodbye my lover, goodbye my friend!!=G'luck lad!",
+		"Are you sure?=You're positivity excites me ;)",
 	}
 
 	//converting input to string
@@ -58,7 +58,7 @@ func ElizaOutput(inputStr string) string{
 			print("b44444444 rand return")
 
 
-		rand.Seed(time.Now().UTC().UnixNano())//Sets the time
+		
 		//return answer if input does not match expressions
 		return answers[rand.Intn(len(answers))]
 }
