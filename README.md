@@ -4,6 +4,8 @@ Chat bot
 My name is Dave Clarke, I'm a third year studying Software Development in GMIT. I'm 22 years old and have lived in Galway 
 all my life. I also currently work part time in the Meyrick Hotel in Galway city as a concierge.
 
+To run this this project, clone my repository https://github.com/davidclarke1995/Eliza.git
+
 I created this Chatbot called Eliza for a project in Data Representation. This project is worth 50% of the
 overall mark of the course.
 
@@ -16,7 +18,8 @@ same code from my GoProblemSheet 3 but it just would not work, it kept skipping 
 to the random answers. So I managed to create arrays containing all the possible user inputs and another array with 
 Elizas responses. I am able to use the regular expressions to take in a String input and output it with a sentence but 
 for some reason it would not work every time I tried. I found a great way to split strings online using an equals
-sign. When I eventually had it working, I just did lots of different phrases that the user may put in.
+sign. When I eventually had it working, I just did lots of different phrases that the user may put in. I also used 
+
 
 I came accross a few problems such as the script.js takes in a button to run Elizas responses but if the user selects
 enter on their computer, it will refresh the page. I tried taking out the button and the then the function and messed

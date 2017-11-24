@@ -78,6 +78,8 @@ func ElizaOutput(inputStr string) string {
         "(.*)hola(.*)",
         "(.*)puns(.*)",
         "(.*)Puns(.*)",
+		"(.*)haha(.*)",
+		"(.*)Haha(.*)",
 
 
 
@@ -145,6 +147,8 @@ func ElizaOutput(inputStr string) string {
         "How would you like it if I spoke in my native language? 01000101 01101100 01101001 01111010 01100001",
         "Sometimes our Outlook in Life is sent but not received=I bought this driving app recently, it kept on crashing.",
         "Sometimes our Outlook in Life is sent but not received=I bought this driving app recently, it kept on crashing.",
+		"Oh I seem to amuse you, do I?=I am so funny I know",
+		"Oh I seem to amuse you, do I?=I am so funny I know",
 
 
     }
