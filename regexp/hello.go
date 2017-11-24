@@ -21,12 +21,14 @@ rand.Seed(time.Now().UTC().UnixNano())//Sets the seeds randomly
 		"(.*)hello(.*)",
 		"(.*)bye(.*)",
 		"(.*)yes(.*)",
+		"(.*)no(.*)",
 	}
 
 	solutions := [] string{
 		"Hi, how are things!?=Well, how are you my friend?",
 		"Goodbye my friend!!=Goodbye my lover, goodbye my friend!!=G'luck lad!",
-		"Are you sure?=You're positivity excites me ;)",
+		"Are you sure?=You're positivity excites me ;)= That's good!",
+		"Why no?=Why not?=Just say yes!",
 	}
 
 	//converting input to string
