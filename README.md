@@ -13,4 +13,14 @@ and meet up at the weekends if we could to help eachother out and get eachother 
 got the file served, the next problem was taking in the user input and user output. After a few days I was back 
 to continuing with the project and starting with the regular expression. I tried time and time again to use the
 same code from my GoProblemSheet 3 but it just would not work, it kept skipping the if statements and going straight
-to the random answers. 
+to the random answers. So I managed to create arrays containing all the possible user inputs and another array with 
+Elizas responses. I am able to use the regular expressions to take in a String input and output it with a sentence but 
+for some reason it would not work every time I tried. I found a great way to split strings online using an equals
+sign. When I eventually had it working, I just did lots of different phrases that the user may put in.
+
+I came accross a few problems such as the script.js takes in a button to run Elizas responses but if the user selects
+enter on their computer, it will refresh the page. I tried taking out the button and the then the function and messed
+around with the code constantly but never managed to get it working. I had event.preventDefault(); in the javascript but
+I still couldnt figure it out.S
+
+Overall I found this project extremely difficult but proud that I have a functional working ChatBot
