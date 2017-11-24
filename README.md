@@ -21,6 +21,6 @@ sign. When I eventually had it working, I just did lots of different phrases tha
 I came accross a few problems such as the script.js takes in a button to run Elizas responses but if the user selects
 enter on their computer, it will refresh the page. I tried taking out the button and the then the function and messed
 around with the code constantly but never managed to get it working. I had event.preventDefault(); in the javascript but
-I still couldnt figure it out.S
+I still couldnt figure it out.
 
 Overall I found this project extremely difficult but proud that I have a functional working ChatBot
